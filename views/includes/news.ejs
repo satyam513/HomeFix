@@ -1,0 +1,145 @@
+<style>
+  .card {
+    height: 300px; /* Set a fixed height for the card */
+    overflow: hidden; /* Hide overflow content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Add relative positioning */
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .btn_news {
+    background-color: rgb(255, 234, 0);
+    color: black;
+    border-radius: 0 1rem 0 1rem;
+    position: absolute; /* Position button */
+    bottom: 10px; /* Adjust bottom spacing */
+    left: 20%; /* Align button horizontally */
+    transform: translateX(-50%); /* Center button horizontally */
+    z-index: 1; /* Ensure button is above content */
+  }
+
+  .btn_news:hover {
+    background-color: purple;
+    color: white;
+  }
+
+  .btn_explore {
+    color: white;
+    background-color: purple;
+    border-radius: 0 1rem 0 1rem;
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+    transition: transform 0.3s ease; /* Add transition effect */
+  }
+
+  .btn_explore:hover,
+  .btn_explore:focus {
+    transform: scale(1.1); /* Scale up the button on hover or focus */
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: #f0f0f0;
+  }
+
+  .card:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+
+  .con_new {
+    display: flex;
+  }
+
+  .con_new div {
+    flex: 1;
+  }
+
+  .info {
+    flex: 2;
+  }
+</style>
+
+<body>
+  <div class="container mt-5">
+    <div class="con_new">
+      <div></div>
+      <div class="info">
+        <h2 class="text-center">Our Latest News</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+          consequuntur.
+        </p>
+      </div>
+      <div></div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-5">
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Culpa, pariatur rem porro sapiente blanditiis voluptate quo sunt
+              cumque rerum tenetur error dignissimos.
+            </p>
+          </div>
+          <a href="#" class="btn btn-primary btn_news mt-2">more</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Culpa, pariatur rem porro sapiente blanditiis voluptate quo sunt
+              cumque rerum tenetur error dignissimos.
+            </p>
+          </div>
+          <a href="#" class="btn btn-primary btn_news mt-2">more</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Culpa, pariatur rem porro sapiente blanditiis voluptate quo sunt
+              cumque rerum tenetur error dignissimos.
+            </p>
+          </div>
+          <a href="#" class="btn btn-primary btn_news mt-2">more</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Culpa, pariatur rem porro sapiente blanditiis voluptate quo sunt
+              cumque rerum tenetur error dignissimos.
+            </p>
+          </div>
+          <a href="#" class="btn btn-primary btn_news mt-2">more</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn_explore btn-dark mt-4">Explore more</button>
+    </div>
+  </div>
+</body>
