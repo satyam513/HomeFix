@@ -1,0 +1,86 @@
+<style>
+  .container_testimonal {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+
+  .container-text {
+    flex: 1;
+    padding: 0 20px; /* Add padding as needed */
+  }
+
+  .container-text h1 {
+    margin-top: 0; /* Remove default margin */
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start; /* Align items at the start of the container vertically */
+  }
+
+  .text {
+    margin-left: 10px; /* Add margin between the icon and text */
+  }
+
+  .rating {
+    font-size: 0; /* Remove default font size */
+  }
+
+  .rating input[type="radio"] {
+    display: none; /* Hide radio inputs */
+  }
+
+  .rating label {
+    cursor: pointer;
+    width: 30px; /* Adjust width of stars */
+    height: 30px; /* Adjust height of stars */
+    background-image: url("https://freeiconshop.com/wp-content/uploads/edd/star-curved-outline-filled.png"); /* Path to empty star image */
+    background-size: cover; /* Make sure the star image fills the container */
+    display: inline-block;
+  }
+
+  .rating input[type="radio"]:checked ~ label {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Star-empty.png?20210415194930"); /* Path to filled star image */
+  }
+</style>
+
+<div class="container container_testimonal mt-5">
+  <div class="container-text">
+    <h1>
+      <span><i class="fa-solid fa-quote-left"></i></span> Testimonial
+    </h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero fugit
+      animi quae aut eos cupiditate perferendis et architecto sint, quo,
+      recusandae quaerat? Molestias, esse reprehenderit! Labore iste neque
+      cumque laborum? Fuga ad illum ea, aspernatur fugiat nihil adipisci quidem.
+    </p>
+    <div class="container mt-5">
+      <div class="content">
+        <i class="fa-solid fa-award"></i>
+        <div class="text">
+          <h6>Henry Barton</h6>
+          <p style="font-size: 0.8rem">CEO Homefix Pvt. Ltd.</p>
+        </div>
+      </div>
+    </div>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5" />
+      <label for="star5"></label>
+      <input type="radio" id="star4" name="rating" value="4" />
+      <label for="star4"></label>
+      <input type="radio" id="star3" name="rating" value="3" />
+      <label for="star3"></label>
+      <input type="radio" id="star2" name="rating" value="2" />
+      <label for="star2"></label>
+      <input type="radio" id="star1" name="rating" value="1" />
+      <label for="star1"></label>
+    </div>
+  </div>
+  <div class="container-img">
+    <img
+      src="https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2019/11/testimonial-video-examples.png"
+      alt="homefix"
+    />
+  </div>
+</div>

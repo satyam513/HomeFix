@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomeFix</title>
-    <link rel="stylesheet" href="style.css" />
 
     <link
       rel="stylesheet"
@@ -26,7 +25,16 @@
     />
   </head>
   <body>
+    <%- include("../includes/navbar.ejs") %>
     <div class="container"><%- body %></div>
+
+    <div><%- include("../includes/first.ejs") %></div>
+
+    <div><%- include("../includes/second.ejs") %></div>
+
+    <div><%- include("../includes/third.ejs") %></div>
+
+    <div><%- include("../includes/testimonals.ejs") %></div>
 
     <%- include("../includes/news.ejs") %>
 
