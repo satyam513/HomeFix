@@ -26,6 +26,18 @@
     justify-content: space-evenly;
     position: relative;
   }
+
+  @media screen and (max-width: 768px) {
+    .container_first {
+      flex-direction: column-reverse;
+    }
+
+    .container-img {
+      order: unset;
+      width: 100%;
+      padding: 0;
+    }
+  }
 </style>
 
 <div class="container container_first" style="margin-top: 70px">
@@ -46,10 +58,20 @@
       asperiores harum non, animi, possimus sunt quod iusto consectetur! Qui
       impedit labore culpa.
     </p>
-    <button type="button" class="btn btn-warning">Contact us</button>
+    <button
+      class="btn btn-warning ms-3"
+      type="button"
+      style="border-radius: 0 1rem 0 1rem"
+    >
+      <a class="text-dark" style="text-decoration: none" href="#footer"
+        >Contact us</a
+      >
+    </button>
     &nbsp;&nbsp;&nbsp;<span
       ><i class="fa-solid fa-wand-magic-sparkles"></i></span
-    >&nbsp;&nbsp;<a href="#">Watch our promo</a>
+    >&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=3XF75MWeTKQ"
+      >Watch our promo</a
+    >
     <div class="container-info mt-5">
       <div>
         <h4>24k</h4>

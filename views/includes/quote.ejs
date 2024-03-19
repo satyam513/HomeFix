@@ -117,9 +117,10 @@
     }
   }
 </style>
-<div class="container mt-5">
+<!-- HTML code -->
+<div id="quote" class="container mt-5">
   <div class="quote">
-    <form action="">
+    <form id="quoteForm" action="/book-service" method="post">
       <h1>Get a Quote</h1>
       <div class="form-row">
         <div class="form-group">
@@ -128,6 +129,15 @@
             id="name"
             name="name"
             placeholder="Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
             required
           />
         </div>
@@ -142,7 +152,7 @@
         </div>
         <div class="form-group">
           <select id="serviceType" name="serviceType" required>
-            <option value="" disabled selected>Service type</option>
+            <option value="" disabled selected>Select Service</option>
             <option class="opt" value="plumbing">Plumbing</option>
             <option class="opt" value="electrical">Electrical</option>
             <option class="opt" value="carpentry">Carpentry</option>
@@ -156,3 +166,44 @@
     </form>
   </div>
 </div>
+
+<div id="quoteDisplay" class="container mt-5"></div>
+
+<!-- JavaScript code -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const quoteForm = document.getElementById("quoteForm");
+    const displaySection = document.getElementById("quoteDisplay");
+
+    quoteForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const serviceType = document.getElementById("serviceType").value;
+
+      // Display form values in display section
+      displaySection.innerHTML = `
+        <h1>Get a Quote Details</h1>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone Number:</strong> ${phone}</p>
+        <p><strong>Service Type:</strong> ${serviceType}</p>
+      `;
+
+      // Show alert
+      // Show alert
+      const alertDiv = document.createElement("div");
+      alertDiv.className = "alert alert-success alert-dismissible fade show col-6 offset-3";
+      alertDiv.setAttribute("role", "alert");
+      alertDiv.innerHTML = `
+        You have successfully submitted the quote. We will further notify you.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      `;
+      displaySection.appendChild(alertDiv);
+
+    });
+  });
+</script>

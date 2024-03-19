@@ -1,0 +1,137 @@
+<%= layout("/layouts/boiler") %>
+
+<style>
+  .container_water {
+    margin-top: 70px;
+  }
+
+  .container_waterLineService {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .image-container_waterLineService {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .image-container_waterLineService img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .text-container_waterLineService {
+    overflow: hidden;
+  }
+
+  .h2__waterLineService {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .p_waterLineService {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 50%;
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .image-container_waterLineService {
+      float: none;
+      margin: 0 auto 20px auto;
+    }
+
+    .image-container_waterLineService img {
+      display: block;
+    }
+
+    .text-container_waterLineService {
+      text-align: center;
+    }
+  }
+</style>
+<body>
+  <div class="container container_water">
+    <div class="container container_waterLineService">
+      <div class="image-container_waterLineService">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT38L46s5n21N8C1C7yqlbc2RCiLvvHm231j3xHXYPlbw&s"
+          alt="Water Line Repair"
+        />
+      </div>
+      <div class="text-container_waterLineService">
+        <h2 class="h2__waterLineService">
+          <b>Water Line Repair</b>
+        </h2>
+        <p class="p_waterLineService">
+          Water line repair involves fixing leaks, cracks, or other damages to
+          the water supply lines in residential or commercial buildings. The
+          cost of water line repair can vary depending on factors such as the
+          extent of damage, accessibility, materials needed, and labor costs.
+        </p>
+        <hr />
+        <caption class="caption">
+          <b>Water Line Repair Costing: </b>
+        </caption>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Cost Range</th>
+          </tr>
+          <tr>
+            <td>Minor Repairs (e.g., fixing leaks)</td>
+            <td>$300 - $1,000</td>
+          </tr>
+          <tr>
+            <td>Major Repairs (e.g., replacing sections)</td>
+            <td>$1,000 - $5,000</td>
+          </tr>
+          <tr>
+            <td>Total Replacement</td>
+            <td>$3,000 - $10,000+</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-8">
+        <button class="btn btn_service">
+          <a href="/form" class="book_service" style="color: white;">Book Service &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

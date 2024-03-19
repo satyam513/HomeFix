@@ -1,0 +1,24 @@
+<%= layout("/layouts/boiler") %>
+<style>
+  .con_head {
+    text-align: center;
+    margin-top: 70px;
+  }
+</style>
+<div class="container con_head">
+  <div class="text-center">
+    <h1>Our Pricing</h1>
+    <p class="lead">
+      We offer competitive pricing for our services to ensure that you receive
+      high-quality plumbing solutions without breaking the bank. Below are our
+      standard rates for common plumbing services:
+    </p>
+  </div>
+  <div><%- include("../listings/carpentry") %></div>
+  <div><%- include("../listings/electrical") %></div>
+  <div><%- include("../listings/plumbing") %></div>
+  <div><%- include("../listings/bathroomPlumbing") %></div>
+  <div><%-include("../listings/kitchenPlumbing") %></div>
+  <div><%- include("../listings/gasLineService")%></div>
+  <div><%- include("../listings/waterLineService") %></div>
+</div>

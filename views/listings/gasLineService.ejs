@@ -1,0 +1,136 @@
+<%= layout("/layouts/boiler") %>
+
+<style>
+  .container_gas {
+    margin-top: 70px;
+  }
+
+  .container_gasLineService {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .image-container_gasLineService {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .image-container_gasLineService img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+
+  .text-container_gasLineService {
+    overflow: hidden;
+  }
+
+  .h2__gasLineService {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .p_gasLineService {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 50%;
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .image-container_gasLineService {
+      float: none;
+      margin: 0 auto 20px auto;
+    }
+
+    .image-container_gasLineService img {
+      display: block;
+    }
+
+    .text-container_gasLineService {
+      text-align: center;
+    }
+  }
+</style>
+<body>
+  <div class="container container_gas">
+    <div class="container container_gasLineService">
+      <div class="image-container_gasLineService">
+        <img
+          src="https://www.shutterstock.com/image-vector/vector-abstract-infographics-flat-style-260nw-229555864.jpg"
+          alt="Gas Line Services"
+        />
+      </div>
+      <div class="text-container_gasLineService">
+        <h2 class="h2__gasLineService text-center">
+          <b>Gas Line Services</b>
+        </h2>
+        <p class="p_gasLineService">
+          Gas line services involve the installation, maintenance, and repair of
+          gas supply lines for residential or commercial properties. The cost of
+          gas line services can vary depending on factors such as the complexity
+          of the installation or repair, the distance from the gas source, and
+          the materials used.
+        </p>
+        <hr />
+        <table>
+          <caption>
+            Gas Line Services Costing
+          </caption>
+          <tr>
+            <th>Service</th>
+            <th>Cost Range</th>
+          </tr>
+          <tr>
+            <td>Gas Line Installation</td>
+            <td>$500 - $2,500</td>
+          </tr>
+          <tr>
+            <td>Gas Line Repair</td>
+            <td>$200 - $1,500</td>
+          </tr>
+          <tr>
+            <td>Gas Line Leak Detection</td>
+            <td>$100 - $500</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-8">
+        <button class="btn btn_service">
+          <a href="/form" class="book_service" style="color: white;">Book Service &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

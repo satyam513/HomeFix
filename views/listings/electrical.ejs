@@ -1,0 +1,114 @@
+<% layout("/layouts/boiler.ejs") %>
+<style>
+  .con_plumb {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line if necessary */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text content */
+  }
+
+  .con_img {
+    flex: 1; /* Take up full width on small screens */
+    margin-right: 20px; /* Add margin between image and text */
+  }
+
+  .con_img img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Apply border radius to image */
+  }
+
+  .con-text {
+    flex: 1; /* Take up full width on small screens */
+    margin-top: 20px; /* Add margin to top */
+  }
+
+  table {
+    width: 100%; /* Occupy full width of container */
+    border-collapse: collapse; /* Collapse table borders */
+    border: 1px solid #000; /* Add border to the table */
+  }
+
+  th,
+  td {
+    padding: 8px; /* Add padding to table cells */
+    border: 1px solid #000; /* Add border to table cells */
+    text-align: left; /* Align text content to the left */
+  }
+
+  th {
+    background-color: #f2f2f2; /* Set background color for table header */
+  }
+
+  a {
+    text-decoration: none; /* Remove default underline from links */
+    color: black; /* Set link color to black */
+  }
+
+  @media screen and (max-width: 768px) {
+    .con-img {
+      flex: 1 100%;
+    }
+
+    .con_plumb {
+      flex-direction: column;
+    }
+  }
+</style>
+<div class="container con_plumb">
+  <div class="con_img">
+    <img
+      src="https://media.istockphoto.com/id/663984670/vector/electrician.jpg?s=612x612&w=0&k=20&c=uVQgUt_0RB1KY46mpK6thmHsFqau7tVw6v1OEfPze9o="
+      alt="plumbing"
+    />
+  </div>
+  <div class="con-text">
+    <h1>Electrical Services</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ullam officia
+      eos unde eveniet ducimus, maiores minima est quaerat harum, labore, atque
+      ipsum voluptate excepturi provident consectetur assumenda optio similique.
+      Voluptate obcaecati quia enim a aperiam, eveniet nihil minima ullam minus
+      veritatis molestiae illo commodi velit nemo modi totam deleniti, earum,
+      itaque nam atque. Veniam iure nulla omnis dicta cumque. Minus eligendi
+      dicta soluta quaerat tenetur ad reiciendis voluptatibus! Quasi aliquam
+      mollitia distinctio reprehenderit cupiditate est, qui iure adipisci ipsum
+      eum officia illum, accusamus similique error autem officiis explicabo
+      aperiam!
+    </p>
+    <caption>
+      <b>Our Electrical Services</b>
+    </caption>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Electrical Wiring</td>
+          <td>Installation and repair of electrical wiring in buildings.</td>
+          <td>$150 - $500</td>
+        </tr>
+        <tr>
+          <td>Lighting Installation</td>
+          <td>Installation of indoor and outdoor lighting fixtures.</td>
+          <td>$100 - $300</td>
+        </tr>
+        <tr>
+          <td>Electrical Panel Upgrade</td>
+          <td>Upgrading electrical panels to meet increased power demands.</td>
+          <td>$500 - $1500</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn_service">
+      <a href="/form" class="book_service" style="color: white;">Book Service &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    </button>
+  </div>
+</div>

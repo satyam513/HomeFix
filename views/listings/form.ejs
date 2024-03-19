@@ -1,0 +1,99 @@
+<% layout("/layouts/boiler.ejs") %>
+<style>
+  body {
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  .alert {
+    margin-top: 70px;
+  }
+</style>
+
+<% if(success && success.length){ %>
+  <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+      <%= success %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+
+<% if(error && error.length){ %>
+  <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+      <%= error %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+
+<div class="container row mt-3">
+  <div class="col-8 offset-2">
+    <h1 class="mt-5">Book Service</h1>
+    <form action="/form" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          name="phone"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea
+          class="form-control"
+          id="address"
+          name="address"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="service">Select Service:</label>
+        <select class="form-control" id="service" name="service" required>
+          <option value="" disabled selected>Select Service</option>
+          <option value="plumbing">Plumbing</option>
+          <option value="electrical">Electrical</option>
+          <option value="carpentry">Carpentry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+      <button class="btn btn_service" style="background-color: purple">
+        Submit &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </form>
+  </div>
+</div>

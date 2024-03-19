@@ -1,0 +1,135 @@
+<%= layout("/layouts/boiler") %>
+
+<style>
+  .container_kitchen {
+    margin-top: 70px;
+  }
+
+  .container_kitchenPlumbing {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .image-container_kitchenPlumbing {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .image-container_kitchenPlumbing img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+
+  .text-container_kitchenPlumbing {
+    overflow: hidden;
+  }
+
+  .h2__kitchenPlumbing {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .p_kitchenPlumbing {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 50%;
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .image-container_kitchenPlumbing {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .image-container_kitchenPlumbing img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+</style>
+<body>
+  <div class="container container_kitchen">
+    <div class="container container_kitchenPlumbing">
+      <div class="image-container_kitchenPlumbing">
+        <img
+          src="https://www.shutterstock.com/image-vector/plumbing-specialist-toolbox-fixing-repairing-260nw-1042465225.jpg"
+          alt="Kitchen Plumbing"
+        />
+      </div>
+      <div class="text-container_kitchenPlumbing">
+        <h2 class="h2__kitchenPlumbing text-center">
+          <b>Kitchen Plumbing</b>
+        </h2>
+        <p class="p_kitchenPlumbing">
+          Kitchen plumbing services include the installation, maintenance, and
+          repair of plumbing fixtures and pipes in kitchens. This can involve
+          fixing leaks, installing new sinks or faucets, repairing garbage
+          disposals, and addressing other plumbing issues specific to the
+          kitchen area.
+        </p>
+        <hr />
+        <table>
+          <caption>
+            Kitchen Plumbing Costing
+          </caption>
+          <tr>
+            <th>Service</th>
+            <th>Cost Range</th>
+          </tr>
+          <tr>
+            <td>Sink Installation</td>
+            <td>$200 - $600</td>
+          </tr>
+          <tr>
+            <td>Faucet Replacement</td>
+            <td>$100 - $400</td>
+          </tr>
+          <tr>
+            <td>Garbage Disposal Repair</td>
+            <td>$150 - $500</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-8">
+        <button class="btn btn_service">
+          <a href="/form" class="book_service" style="color: white;">Book Service &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

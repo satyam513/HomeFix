@@ -39,12 +39,26 @@
   .fa-wrench {
     font-size: 50px; /* Adjust icon size */
   }
+
+  @media screen and (max-width: 768px) {
+    .container_third-img {
+      flex: 1 100%;
+    }
+
+    .container_third {
+      flex-direction: column;
+    }
+
+    .content {
+      margin-top: 20px;
+    }
+  }
 </style>
 
 <div class="container container_third mt-5">
   <div class="container-img">
     <img
-      src="https://i.pinimg.com/originals/8b/7c/1c/8b7c1c962b6bb8f467070daa5209cb9c.png"
+      src="https://www.cfsreview.com/wp-content/uploads/sites/13/2016/04/HiRes.jpg"
       alt="homefix"
     />
   </div>
@@ -82,5 +96,8 @@
         </div>
       </div>
     </div>
+    <button class="btn btn_service mt-4">
+      <a href="/form" class="book_service third_book" style="color: white;">Book Service &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+    </button>
   </div>
 </div>

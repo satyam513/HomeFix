@@ -1,0 +1,140 @@
+<%= layout("/layouts/boiler") %>
+
+<style>
+  .container_plumbing {
+    margin-top: 70px;
+  }
+
+  .container_plumbingService {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .image-container_plumbingService {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .image-container_plumbingService img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+
+  .text-container_plumbingService {
+    overflow: hidden;
+  }
+
+  .h2__plumbingService {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .p_plumbingService {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 50%;
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+    .image-container_plumbingService {
+      float: none;
+      margin: 0 auto 20px auto;
+    }
+
+    .image-container_plumbingService img {
+      display: block;
+    }
+
+    .text-container_plumbingService {
+      text-align: center;
+    }
+  }
+</style>
+<body>
+  <div class="container container_plumbing">
+    <div class="container container_plumbingService">
+      <div class="image-container_plumbingService">
+        <img
+          src="https://img.freepik.com/premium-vector/friendly-smiling-cartoon-professional-man-plumber-character-standing-uniform-isolated-white-flat-pipe-repair-tools-working-accessories-bathroom-toilet-set_575670-2220.jpg"
+          alt="Plumbing Services"
+        />
+      </div>
+      <div class="text-container_plumbingService">
+        <h2 class="h2__plumbingService text-center">
+          <b>Bathroom Plumbing</b>
+        </h2>
+        <p class="p_plumbingService">
+          Bathroom plumbing involves the installation, repair, and maintenance
+          of pipes, fixtures, and fittings in bathrooms. Whether it's fixing a
+          leaky faucet, unclogging a drain, or installing new plumbing fixtures,
+          bathroom plumbing services ensure that your bathroom operates smoothly
+          and efficiently.
+        </p>
+        <hr />
+        <table>
+          <caption>
+            Bathroom Plumbing Costing
+          </caption>
+          <tr>
+            <th>Service</th>
+            <th>Cost Range</th>
+          </tr>
+          <tr>
+            <td>Leaky Faucet Repair</td>
+            <td>$100 - $300</td>
+          </tr>
+          <tr>
+            <td>Drain Unclogging</td>
+            <td>$150 - $500</td>
+          </tr>
+          <tr>
+            <td>Toilet Installation</td>
+            <td>$200 - $800</td>
+          </tr>
+          <tr>
+            <td>Shower/Bathtub Repair</td>
+            <td>$250 - $1,000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 offset-8">
+        <button class="btn btn_service">
+          <a href="/form" class="book_service" style="color: white;">Book Service &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
