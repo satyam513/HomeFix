@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smart-axis-417715",
+  "private_key_id": "ad185a93616fc77bf372eb68e4941446144f679b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCYlrJCAbs7c+ZQ\nQE+wjKATWY0TpyKCffzIlgY4TzjbZjaxVFEUk9bmEHGjGPWdG+rHziM+mBhEmEgI\nSWCFniy9tlQJHcRLb2U575CrBiy8KC7C3NYNheTQTay54EVGkEZviGhrGTWV8eIS\nHXNEYNxjh30v8WDwaYNp1tyU5NhHc/qWPl2QLe/HFYTG+kq558vH88VMorsCiZ97\nBOTIi8LtYar805615Rw8ODqqfnMeSTRK3gEgZUwZ8cT6mp51VTjaaoWm2Ao2xVA+\nI2U8HdFIduhoIFqyyPbZwyrpIgEBqV/WOpj8mzZZQQ5+yK14q6a5tU8KjMchglMl\nYz+QWBgtAgMBAAECggEACChG64DwsRRjMRHzFgGP6DY+yhjCtJ5cIR67bToM/yus\ndlfx2rYERHncvVxO+yEcMNDRcQihWX9uRbp4gBmCk6TM7XeA1Ys6ao8Rrpbuqs4X\ndorm9ZjyxdEKkB2leR4q6c5YI2DuYgT+Rzt5p04/UfcoZzj8q/WUFS3WToPFF91j\nWwA0acx4hybBcAMvg6iiwqCZwIL013/hZ3CONM2fqjH4AKiphEGhja5riWiT7I18\n86/9Mf+mdSHONhxcbjFOBTzLz4vpu7x7IdKuqzN/CQ6PIh+4VoQBroZVbd4/u+Br\nMsi84GzrPbwOgSnMnXxqJKGYM7TGhhp6ZGe5Jn+BkQKBgQDI2BJkIvOUyAmrsjDa\nCaJoWB2UwT8I5kYeH03rhPSGOUbhDdi8R/AbHpKTHI7CtRDbR7dvSZhqBpLPKMmA\nu6urUuqccXHw6Sf1k1xu3TPOrFXWWOXHvnV4mTD2oADOoGQEFCRZZyMOt9/8HK4D\nM5HxlKwhapuF4Z8g1GpC9STq/QKBgQDCfiEbCzczq69z+NLBISyw9grbLK8hhi2H\n8pESNwRowi9RkzTpfI3EWuw0PDH5XCQpjdBT13s9JYPlOJNgbrUvf/NUot5tdFlz\n/99WV4vpZcQHYl9owjZ7oCYqENR0qWobLn5+GAU2ciY9muw9j3N5dPeUvQTgB3kE\nTdvYx9hg8QKBgQC04mUt6oyWItMS35k/xg2PDE0X/DNZQItF9cunokbX3B4J8v6Q\nE/obcp1wAPhSQ+C6nQyIHjA2zVTLXmCcoGksE7FY1JNZ9aMXeXB2KKLQMEXelpHc\nI5yI0O9YLyKK9ckeI0XZfxoD13bTCMFwALIgcVXVgr4vBdTbLHPHeiGVwQKBgASa\nVZA9SLYpVwKondxCO7uIZyNewFpLwaIZBIPo12rfRZ1pnXP1JanC+RoXXptnKdft\n6kNBs0H0NFXla995X0Jbhde37wmqGj/bi16QvdftN6FxG47wIbf1R1HxigWkyMUR\n6Z50VRM/ylXk57hhP7tdIErd2lKu+pc2fIB54k4RAoGAcTuG2rX1MUQ+R7CKcLju\nHBMF2JHU0ViKASUiACi7XGigASmfu9jVR7IWKC5F/Ud988pEDbF9dDeJm/WDXqk3\nh05xQDoDUyv3mLy0po3qUyESuf/NAXzoEzwckzRG9jU89Db8j9kDsuqaJ7yot2On\nxB9YHoGIF88WZibJ3CtX48E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "homefix@smart-axis-417715.iam.gserviceaccount.com",
+  "client_id": "117055028740192085189",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/homefix%40smart-axis-417715.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

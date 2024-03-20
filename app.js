@@ -1,5 +1,5 @@
-if(process.env.NODE_ENV != "production"){
-  require('dotenv').config();
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config();
 }
 
 // Import required modules
@@ -9,21 +9,23 @@ const ejsMate = require("ejs-mate");
 const flash = require("connect-flash");
 const session = require("express-session");
 const nodemailer = require("nodemailer");
-const { google } = require('googleapis');
+const { google } = require("googleapis");
 
 const spreadsheetId = process.env.SPREADSHEETID;
-const range = 'Sheet1!A:F';
+const range = "Sheet1!A:F";
 
 // Initialize Express app
 const app = express();
 
 // Configure session middleware
-app.use(session({
-  secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false } // Set secure to true if your app is served over HTTPS
-}));
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }, // Set secure to true if your app is served over HTTPS
+  })
+);
 
 // Configure flash middleware
 app.use(flash());
@@ -132,52 +134,73 @@ app.get("/explore", (req, res) => {
 async function appendDataToSpreadsheet(data) {
   const auth = new google.auth.GoogleAuth({
     keyFile: process.env.KEYFILE,
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 
-  const sheets = google.sheets({ version: 'v4', auth });
+  const sheets = google.sheets({ version: "v4", auth });
 
   try {
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId,
       range,
-      valueInputOption: 'USER_ENTERED',
+      valueInputOption: "USER_ENTERED",
       resource: {
         values: [
-          [data.name, data.email, data.phone, data.address, data.service, data.description],
+          [
+            data.name,
+            data.email,
+            data.phone,
+            data.address,
+            data.service,
+            data.description,
+          ],
         ],
       },
     });
-    console.log('Data appended successfully:', response.data);
+    console.log("Data appended successfully:", response.data);
   } catch (error) {
-    console.error('Error appending data:', error);
+    console.error("Error appending data:", error);
   }
 }
 
 app.post("/form", async (req, res) => {
   const { name, email, phone, address, service, description } = req.body;
-  console.log('Form Data:', { name, email, phone, address, service, description });
+  console.log("Form Data:", {
+    name,
+    email,
+    phone,
+    address,
+    service,
+    description,
+  });
 
-  await appendDataToSpreadsheet({ name, email, phone, address, service, description });
+  await appendDataToSpreadsheet({
+    name,
+    email,
+    phone,
+    address,
+    service,
+    description,
+  });
 
   let mailOptions = {
     from: process.env.SECRET,
     to: email,
     subject: `Booking Confirmation for ${service}`,
-    text: `Dear ${name},\n\nThank you for booking our ${service} service. We will get back to you shortly.\n\nDetails:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nService: ${service}\nDescription: ${description}\n\nRegards,\nHomeFix Team`
+    text: `Dear ${name},\n\nThank you for booking our ${service} service. We will get back to you shortly.\n\nDetails:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAddress: ${address}\nService: ${service}\nDescription: ${description}\n\nRegards,\nHomeFix Team`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
       req.flash("error", error.message);
-      return res.redirect('/listings/form');
+      return res.redirect("/form");
     } else {
-      console.log('Email sent: ' + info.response);
+      console.log("Email sent: " + info.response);
       req.flash("success", "Email sent successfully.");
-      return res.redirect('/listings/form');
+      return res.redirect("/form");
     }
-  }); 
+  });
 });
 
 // Start the server

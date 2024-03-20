@@ -15,17 +15,31 @@
 </style>
 
 <% if(success && success.length){ %>
-  <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
-      <%= success %>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-<% } %>
-
-<% if(error && error.length){ %>
-  <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
-      <%= error %>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+<div
+  class="alert alert-success alert-dismissible fade show col-6 offset-3"
+  role="alert"
+>
+  <%= success %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %> <% if(error && error.length){ %>
+<div
+  class="alert alert-danger alert-dismissible fade show col-6 offset-3"
+  role="alert"
+>
+  <%= error %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
 <% } %>
 
 <div class="container row mt-3">
@@ -49,16 +63,18 @@
           class="form-control"
           id="email"
           name="email"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
           required
         />
       </div>
       <div class="form-group">
         <label for="phone">Phone Number:</label>
         <input
-          type="text"
+          type="tel"
           class="form-control"
           id="phone"
           name="phone"
+          pattern="[0-9]{10}"
           required
         />
       </div>
